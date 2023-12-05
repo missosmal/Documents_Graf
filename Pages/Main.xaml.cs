@@ -24,7 +24,7 @@ namespace Documents_Graf.Pages
         public Main()
         {
             InitializeComponent();
-            CreatedUI;
+            CreatedUI();
         }
         public void Exit(object sender, RoutedEventArgs e)
         {
