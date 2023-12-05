@@ -1,4 +1,5 @@
-﻿using Documents_Graf.Classes;
+﻿using Documents_Graf;
+using Documents_Graf.Classes;
 using Documents_Graf.Model;
 using Microsoft.Win32;
 using System;
@@ -44,8 +45,8 @@ namespace Documents_Graf.Pages
         public Add(Document Document = null)
         {
             InitializeComponent();
-
-            if(Document != null)
+            UpdateUSER();
+            if (Document != null)
             {
                 this.Document = Document;
 
@@ -55,15 +56,26 @@ namespace Documents_Graf.Pages
                     src.Source = new BitmapImage(new Uri(s_src));
                 }
                 tb_name.Text = this.Document.name;
-                tb_user.Text = this.Document.user;
+                tb_user.SelectedItem = this.Document.user;
                 tb_id.Text = this.Document.id_document.ToString();
                 tb_date.Text = this.Document.date.ToString("dd.MM.yyyy");
                 tb_status.SelectedIndex = this.Document.status;
                 tb_vector.Text = this.Document.vector;
                 btnAdd.Content = "Изменить";
             }
+            else
+            {
+                UpdateUSER();
+            }
         }
 
+        private void UpdateUSER()
+        {
+            foreach (var user in MainWindow.init.AllUser)
+            {
+                tb_user.Items.Add(user.name);
+            }
+        }
         private void AddDocument(object sender, RoutedEventArgs e)
         {
             if(s_src.Length == 0) {

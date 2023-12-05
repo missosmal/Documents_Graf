@@ -23,7 +23,7 @@
                 <Image x:Name="image" Source="/Documents_Graf;component/Image/icon.png" Width="50" Height="50" Grid.Column="0"/>
                 <Label x:Name="headerLbl" Content="Добавить документ" Foreground="White" FontSize="20" FontWeight="Bold" Grid.Column="1"
                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button x:Name="QuitBtn" Content="Вернуться" Foreground="Black" Click="Exit" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                <Button x:Name="QuitBtn" Content="Вернуться" Foreground="Black" Click="Back" HorizontalAlignment="Right" VerticalAlignment="Top" 
                     Margin="0,10,10,0" Grid.Column="2" Width="110" Height="30"/>
             </Grid>
         </StackPanel>
@@ -34,21 +34,19 @@
                 <Label Content="Укажите наименование:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,380,10"/>
                 <TextBox VerticalContentAlignment="Center" x:Name="tb_name" VerticalAlignment="Top" Margin="240,35,10,0"/>
                 <Label Content="Укажите ответственного:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,55,380,10"/>
-                <ComboBox x:Name="tb_user" VerticalAlignment="Top" Margin="240,80,150,0"/>
-                <Button x:Name="AddUserBtn" Content="Добавить" Height="30" Width="110" HorizontalAlignment="Right" VerticalAlignment="Top"
-                        Margin="0,80,10,0" Click="NextPage"/>
+                <ComboBox x:Name="tb_user" VerticalAlignment="Top" Margin="240,80,10,0"/>
                 <Label Content="Укажите код документа:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,100,380,10"/>
                 <TextBox VerticalContentAlignment="Center" x:Name="tb_id" VerticalAlignment="Top" Margin="240,125,10,0"/>
                 <Label Content="Укажите дату поступления:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,145,367,0"/>
                 <TextBox VerticalContentAlignment="Center" x:Name="tb_date" VerticalAlignment="Top" Margin="240,170,10,0"/>
                 <Label Content="Укажите статус:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,190,433,0"/>
-                <ComboBox x:Name="tb_status" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,215,10,0" Width="532">
+                <ComboBox x:Name="tb_status" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,215,10,0" Width="542">
                     <TextBlock Text="Входящий"/>
                     <TextBlock Text="Исходящий"/>
                 </ComboBox>
                 <Label Content="Направление:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,240,443,0"/>
                 <TextBox VerticalContentAlignment="Center" x:Name="tb_vector" VerticalAlignment="Top" Margin="240,265,150,0"/>
-                <Button x:Name="btnAdd" Content="Сохранить" Click="AddBtn" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,265,10,0" Width="110" Height="30"/>
+                <Button x:Name="btnAdd" Content="Сохранить" Click="AddDocument" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,265,10,0" Width="110" Height="30"/>
                 <Button Content="Выбрать" Click="SelectImage" Width="110" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,100,0,10"/>
             </Grid>
         </StackPanel>

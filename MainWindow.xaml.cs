@@ -23,6 +23,7 @@ namespace Documents_Graf
     {
         public static MainWindow init;
         public List<DocumentContext> AllDocuments = new DocumentContext().AllDocuments();
+        public List<UserContext> AllUser = new UserContext().AllUsers();
         public enum pages
         {
             main,

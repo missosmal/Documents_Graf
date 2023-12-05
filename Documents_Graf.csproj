@@ -69,10 +69,12 @@
     </Compile>
     <Compile Include="Classes\Common\DBConnect.cs" />
     <Compile Include="Classes\DocumentContext.cs" />
+    <Compile Include="Classes\UserContext.cs" />
     <Compile Include="Elements\Item.xaml.cs">
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDocument.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -88,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Pages\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
